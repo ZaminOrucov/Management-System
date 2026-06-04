@@ -6,7 +6,7 @@ using System.Text;
 
 namespace InMemoryUserManagement
 {
-    // Rol və icazələr
+    
     public class Role
     {
         public string Name { get; set; }
@@ -18,7 +18,6 @@ namespace InMemoryUserManagement
         }
     }
 
-    // İstifadəçi modeli
     public class User
     {
         public Guid Id { get; set; } = Guid.NewGuid();
@@ -35,7 +34,7 @@ namespace InMemoryUserManagement
         }
     }
 
-    // Şifrə hash helper
+  
     public static class SecurityHelper
     {
         public static string HashPassword(string password)
@@ -52,7 +51,6 @@ namespace InMemoryUserManagement
         }
     }
 
-    // İstifadəçi idarəetmə sistemi RAM üzərində
     public class UserManager
     {
         public List<User> Users { get; private set; } = new List<User>();
@@ -61,7 +59,7 @@ namespace InMemoryUserManagement
         {
             if (Users.Any(u => u.Email == email))
             {
-                Console.WriteLine("Bu email artıq mövcuddur!");
+                Console.WriteLine("Bu E-mail artıq mövcuddur!");
                 return;
             }
 
@@ -125,7 +123,7 @@ namespace InMemoryUserManagement
             }
         }
 
-        // Dummy data generator
+   
         public void GenerateDummyUsers(int count, Role defaultRole)
         {
             for (int i = 1; i <= count; i++)
@@ -138,7 +136,7 @@ namespace InMemoryUserManagement
         }
     }
 
-    // Konsol tətbiqi
+ 
     class Program
     {
         static void Main(string[] args)
@@ -187,13 +185,13 @@ namespace InMemoryUserManagement
                         break;
 
                     case "3":
-                        Console.Write("Yenilənəcək istifadəçinin emaili: ");
+                        Console.Write("Yenilənəcək istifadəçinin E-maili: ");
                         string emailToUpdate = Console.ReadLine();
                         userManager.UpdateUser(emailToUpdate);
                         break;
 
                     case "4":
-                        Console.Write("Silinəcək istifadəçinin emaili: ");
+                        Console.Write("Silinəcək istifadəçinin E-maili: ");
                         string emailToDelete = Console.ReadLine();
                         userManager.DeleteUser(emailToDelete);
                         break;
