@@ -168,7 +168,7 @@ namespace InMemoryUserManagement
                     case "1":
                         Console.Write("Ad: ");
                         string name = Console.ReadLine();
-                        Console.Write("Email: ");
+                        Console.Write("E-mail: ");
                         string email = Console.ReadLine();
                         Console.Write("Parol: ");
                         string password = Console.ReadLine();
