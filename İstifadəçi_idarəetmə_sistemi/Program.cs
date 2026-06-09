@@ -148,8 +148,6 @@ namespace InMemoryUserManagement
             userRole.Permissions.Add("read");
 
             var userManager = new UserManager();
-
-            // Dummy data ilə başlamaq
             userManager.GenerateDummyUsers(100, userRole);
 
             while (true)
