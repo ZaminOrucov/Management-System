@@ -71,7 +71,7 @@ namespace InMemoryUserManagement
                 UserRole = role
             };
             Users.Add(user);
-            Console.WriteLine("İstifadəçi yaradıldı!");
+            Console.WriteLine("Yeni istifadəçi yaradıldı!");
         }
 
         public void ListUsers(int page = 1, int pageSize = 20)
